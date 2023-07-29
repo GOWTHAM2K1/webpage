@@ -1,0 +1,225 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  /*background-color: #f2f2f2; */background-color: rgba(0, 0, 0, 0.5); color:white;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.logo-container img {
+  height: 70px;
+}
+
+.title-container {
+  flex-grow: 1;
+}
+
+.menu-container ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline-end: 10px;
+}
+
+.menu-container ul li {
+  margin-left: 20px;
+}
+
+.menu-container ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.menu-container ul li a img {
+  height: 20px;
+}
+
+.menu-container ul li a:hover{
+  background-color: #f2f2f2;
+}
+
+#aboutus {
+  position: relative;
+  top: 60px;
+  align-items: left;
+  padding-inline-end: 750px;
+  /* Adjust the padding value as per your design */
+  background-color: #f2f2f2;
+  left: 0%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+    padding: 0px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .title-container h1{
+    display: none;
+  }
+
+  .logo-container {
+    margin-bottom: 0px;
+    width: fit-content;
+  }
+
+  .menu-container ul {
+    justify-content:center;
+    padding-inline-end: 0;
+    flex-direction: column;
+    display: none;
+    
+  }
+
+  .menu-container ul li {
+    margin: 0 10px;
+    padding: 3px;
+    
+  }
+
+  .menu-container ul.active{
+    display: flex;
+  }
+
+
+}
+
+/* COW IMAGE*/
+.image {
+  position: relative;
+}
+
+.image img {
+  position: absolute;
+  top: 53px;
+  right: 0px;
+  max-width: 100%;
+  /* Ensure image does not exceed container width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/*CONTENS */
+.contents {
+  position: absolute;
+  top: 20px;
+  display: flex;
+}
+
+.contents div {
+  background-color: #0A1828;
+}
+
+.h11 {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  color: #cba175;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  /* Set the body and HTML height to 100% for full-page height */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+}
+
+.container {
+  display: flex;
+  position: relative;
+  /* Use flexbox to create a vertical layout */
+  flex-direction: column;
+  /* Arrange elements vertically */
+  min-height: 100vh;
+  /* Set the container's minimum height to 100% of the viewport height */
+  background-color: #0A1828;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  .image{
+    height: auto;
+    top: auto;
+    padding: auto;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    justify-content: space-around;
+  }
+
+  .contents {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}
+
+.dropdown{
+  position: absolute;
+  top: 1.55rem;
+  right: 1.25rem;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 21px;
+  width: 30px;
+  z-index: 10000;
+}
+
+.bar{
+  border-radius: 8px;
+  background-color: rgb(21 21 89 / 89%);
+  width: 100%;
+  height: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown{
+    display: flex;
+  }
+
+  nav{
+    flex-direction: column;
+  }
+
+}
+
+.video{
+  display: block;
+  align-self: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
